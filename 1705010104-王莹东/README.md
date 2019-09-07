@@ -3,7 +3,7 @@
 
 ### 演示 [Demo](http://www.willdove.top/homework/)
 
-##开发工具、语言：
+## 开发工具、语言：
 	* 开发工具为 Hbuildx 
 	* 开发语言为 JavaScript
 	* 使用的框架为 Vue.js
