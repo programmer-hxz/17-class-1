@@ -12,12 +12,11 @@
 	* 求解出计算机存储容量、存储器价格、装满程序所需成本
 ## 源代码文件说明(只说明关键文件)
 	* src
-		* assets
-			* logo.png        ---Vue 的logo图片
-		* components
-			* HelloWorld.vue  ---头部提示组件
-			* Table.vue       ---主体组件
-		* App.vue             ---页面入口文件
-		* main.js             ---入口js文件
+	  * assets
+	     * logo.png        ---Vue 的logo图片
+	  * components
+	     * HelloWorld.vue  ---头部提示组件
+	     * Table.vue       ---主体组件
+	  * App.vue             ---页面入口文件
+	  * main.js             ---入口js文件
 	* index.html              ---入口html文件
-
