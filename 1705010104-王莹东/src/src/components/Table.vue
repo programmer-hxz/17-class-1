@@ -2,19 +2,23 @@
   <div class="inp">
     <div class="form-group ">
       <label>年份</label>
-      <input class="form-control" type="number" v-model="years" placeholder="请输入年份(年)" />
+      <input class="form-control" type="number" min="1965"  v-model="years" placeholder="年份" />
     </div>
     <div class="form-group ">
       <label>字长</label>
-      <input class="form-control" type="number" v-model="bits" placeholder="请输入计算机字长(字)" />
+      <select v-model="bits" class="form-control">
+        <option value="1">1字（16位）</option>
+        <option value="2">2字（32位）</option>
+        <option value="4">4字（64位）</option>
+      </select>
     </div>
     <div class="form-group ">
       <label>工资</label>
-      <input class="form-control" type="number" v-model="salaries" placeholder="请输入程序员的平均工资(美元/月)" />
+      <input class="form-control" type="number" min="1"  v-model="salaries" placeholder="请输入程序员的平均工资(美元/月)" />
     </div>
     <div class="form-group ">
       <label>数量</label>
-      <input class="form-control" type="number" v-model="sum" placeholder="请输入程序员每天的开发数量(指令/天)" />
+      <input class="form-control" type="number"  min="1"  v-model="sum" placeholder="请输入程序员每天的开发数量(指令/天)" />
     </div>
     <div>
       <button class="button btn  btn-primary" @click="compute" >提交</button>
@@ -63,10 +67,20 @@
           alert("输入内容不能为空！")
           return ;
         }
+        if(this.years.trim()[0] == '-'||this.bits.trim()[0] == '-'||this.salaries.trim()[0] == '-'||this.sum.trim()[0] == '-')
+        {
+          alert("输入内容不能为负数！")
+          return ;
+        }
+        if(this.years < 1965){
+          alert("年份不能小于1965！")
+          return ;
+        }
         console.log(this.result)
         this.result.volume = 4080 * Math.exp(0.28*(this.years - 1960));
         this.result.value = 0.048 * Math.pow(0.72,(this.years - 1974)*1.0) * this.bits;
-        this.result.chengben = this.result.volume * this.result.value + this.result.volume* this.salaries / (this.sum*this.bits)*30;
+       // this.result.chengben = this.result.volume * this.result.value + this.result.volume* this.salaries / (this.sum*this.bits)*30;
+        this.result.chengben = this.result.volume* this.salaries / (this.sum*this.bits)*30;
         this.result.show = true;
       }
     },
