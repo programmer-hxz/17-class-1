@@ -1,0 +1,190 @@
+package ruanjianproject;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class Text1_5 {
+	public JFrame jFrame;
+	public JPanel jPanel;
+	public JTextField jTextField1_1,jTextField1_2,jTextField1_3,jTextField1_4,jTextField2_1,jTextField2_2,jTextField3_1,jTextField3_2,jTextField4_1,jTextField4_2,jTextField4_3,jTextField4_4;
+	public JLabel jLabel1_1,jLabel1_2,jLabel1_3,jLabel1_4,jLabel2,jLabel2_1,jLabel2_2,jLabel3,jLabel3_1,jLabel3_2,jLabel4,jLabel4_1,jLabel4_2,jLabel4_3,jLabel4_4;
+	public JButton jButton;
+	public Font font = new Font("", Font.BOLD, 20);
+	
+	public Text1_5() {
+		// TODO Auto-generated constructor stub
+		GUI();
+		get_result();
+	}
+	public void GUI() {
+		jFrame = new JFrame("软件工程习题一题目5");
+		jFrame.setSize(650,800);
+		jPanel = new JPanel();
+		jPanel.setBackground(new Color(255,255,153));
+		jPanel.setLayout(null);
+		jFrame.add(jPanel);
+		jLabel1_1 = new JLabel("输入年份:");
+		jLabel1_1.setBounds(25, 25, 150, 25);
+		jLabel1_1.setFont(font);
+		jLabel1_2 = new JLabel("输入月薪:");
+		jLabel1_2.setBounds(250, 25, 150, 25);
+		jLabel1_2.setFont(font);
+		jLabel1_3 = new JLabel("输入字长:");
+		jLabel1_3.setBounds(25, 60, 150, 25);
+		jLabel1_3.setFont(font);
+		jLabel1_4 = new JLabel("一天开发指令数:");
+		jLabel1_4.setBounds(250, 60, 175, 25);
+		jLabel1_4.setFont(font);
+		
+		jLabel2 = new JLabel("<html>例(1)?在1985(数据可修改)年对计算机存储容量的需求估计是多少？"
+				+ "如果字长为16位，这个存储器的价格是多少？</html>");
+		jLabel2.setBounds(25, 115, 600, 50);
+		jLabel2.setFont(font);
+		jLabel2_1 = new JLabel("存储容量需求M=4080e0.28(年份-1960)=");
+		jLabel2_1.setBounds(25, 190, 400, 25);
+		jLabel2_1.setFont(font);
+		jLabel2_2 = new JLabel("存储器价格P=0.003*字长*0.72(年份-1974)*M=");
+		jLabel2_2.setBounds(25, 225, 475, 25);
+		jLabel2_2.setFont(font);
+		
+		jLabel3 = new JLabel("<html>例(2)?假设在1985(数据可修改)年一名程序员每天可开发出10条指令，程序员的平均工资是每月4000(数据可修改)美元。"
+				+ "如果一条指令为一个字长，计算使存储器装满程序所需用的成本。</html>");
+		jLabel3.setBounds(25, 290, 600, 75);
+		jLabel3.setFont(font);
+		jLabel3_1 = new JLabel("需要工作量N=M/200=");
+		jLabel3_1.setBounds(25, 390, 250, 25);
+		jLabel3_1.setFont(font);
+		jLabel3_1.setFont(font);
+		jLabel3_2 = new JLabel("指令成本  S=N*月薪=");
+		jLabel3_2.setBounds(25, 425, 250, 25);
+		jLabel3_2.setFont(font);
+		
+		jLabel4 = new JLabel("<html>例(3)假设在1995(数据可修改)年存储器字长为32位，一名程序员每天可开发出30条指令，"
+				+ "程序员的月平均工资为6000(数据可修改)美元，重复(1)、(2)题。</html>");
+		jLabel4.setBounds(25, 490, 600, 75);
+		jLabel4.setFont(font);
+		jLabel4_1 = new JLabel("存储容量需求M=4080e0.28(年份-1960)=");
+		jLabel4_1.setBounds(25, 590, 400, 25);
+		jLabel4_1.setFont(font);
+		jLabel4_2 = new JLabel("存储器价格P=0.003*字长*0.72(年份-1974)*M=");
+		jLabel4_2.setBounds(25, 625, 475, 25);
+		jLabel4_2.setFont(font);
+		jLabel4_3 = new JLabel("需要工作量N=M/200=");
+		jLabel4_3.setBounds(25, 660, 250, 25);
+		jLabel4_3.setFont(font);
+		jLabel4_3.setFont(font);
+		jLabel4_4 = new JLabel("指令成本  S=N*月薪=");
+		jLabel4_4.setBounds(25, 695, 250, 25);
+		jLabel4_4.setFont(font);
+		
+		jTextField1_1 = new JTextField();
+		jTextField1_1.setBounds(125, 25, 100, 25);
+		jTextField1_2 = new JTextField();
+		jTextField1_2.setBounds(350, 25, 100, 25);
+		jTextField1_3 = new JTextField();
+		jTextField1_3.setBounds(125, 60, 100, 25);
+		jTextField1_4 = new JTextField();
+		jTextField1_4.setBounds(425, 60, 100, 25);
+		
+		jTextField2_1 = new JTextField();
+		jTextField2_1.setBounds(400, 190, 100, 25);
+		jTextField2_1.setEditable(false);
+		jTextField2_2 = new JTextField();
+		jTextField2_2.setBounds(450, 225, 100, 25);
+		jTextField2_2.setEditable(false);
+		
+		jTextField3_1 = new JTextField();
+		jTextField3_1.setBounds(230, 390, 100, 25);
+		jTextField3_1.setEditable(false);
+		jTextField3_2 = new JTextField();
+		jTextField3_2.setBounds(230, 425, 100, 25);
+		jTextField3_2.setEditable(false);
+		
+		jTextField4_1 = new JTextField("73577679");
+		jTextField4_1.setBounds(400, 590, 100, 25);
+		jTextField4_1.setEditable(false);
+		jTextField4_2 = new JTextField("7127");
+		jTextField4_2.setBounds(450, 625, 100, 25);
+		jTextField4_2.setEditable(false);
+		jTextField4_3 = new JTextField("122629");
+		jTextField4_3.setBounds(230, 660, 100, 25);
+		jTextField4_3.setEditable(false);
+		jTextField4_4 = new JTextField("735776790");
+		jTextField4_4.setBounds(230, 695, 100, 25);
+		jTextField4_4.setEditable(false);
+		
+		jButton = new JButton("输入");
+		jButton.setBounds(475, 25, 100, 25);
+		jButton.setFont(font);
+		jPanel.add(jLabel1_1);
+		jPanel.add(jLabel1_2);
+		jPanel.add(jLabel1_3);
+		jPanel.add(jLabel1_4);
+		
+		jPanel.add(jLabel2);
+		jPanel.add(jLabel2_1);
+		jPanel.add(jLabel2_2);
+		
+		jPanel.add(jLabel3);
+		jPanel.add(jLabel3_1);
+		jPanel.add(jLabel3_2);
+		
+		jPanel.add(jLabel4);
+		jPanel.add(jLabel4_1);
+		jPanel.add(jLabel4_2);
+		jPanel.add(jLabel4_3);
+		jPanel.add(jLabel4_4);
+		
+		jPanel.add(jTextField1_1);
+		jPanel.add(jTextField1_2);
+		jPanel.add(jTextField1_3);
+		jPanel.add(jTextField1_4);
+		
+		jPanel.add(jTextField2_1);
+		jPanel.add(jTextField2_2);
+		
+		jPanel.add(jTextField3_1);
+		jPanel.add(jTextField3_2);
+		
+		jPanel.add(jTextField4_1);
+		jPanel.add(jTextField4_2);
+		jPanel.add(jTextField4_3);
+		jPanel.add(jTextField4_4);
+		
+		jPanel.add(jButton);
+		jFrame.setLocationRelativeTo(null);
+		jFrame.setVisible(true);
+		jFrame.setResizable(false);
+	}
+	public void get_result() {
+		jButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO 输入年份
+				int n = Integer.parseInt(jTextField1_1.getText());
+				int money = Integer.parseInt(jTextField1_2.getText());
+				int m =(int) (4080*Math.pow(Math.E,0.28*(n-1960)));
+				int len = Integer.parseInt(jTextField1_3.getText());
+				int p = (int) (0.003*len*Math.pow(0.72,(n-1974))*m);
+				int word = Integer.parseInt(jTextField1_4.getText());
+				int x = m/(word*20);
+				int s = x*money;
+				
+				jTextField2_1.setText(m+"");
+				jTextField2_2.setText(p+"");
+				jTextField3_1.setText(x+"");
+				jTextField3_2.setText(s+"");
+			}
+		});
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Text1_5 t = new Text1_5();
+	}
+
+}
