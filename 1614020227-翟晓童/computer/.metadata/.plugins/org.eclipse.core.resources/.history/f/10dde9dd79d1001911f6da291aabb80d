@@ -1,0 +1,8 @@
+package computer;
+
+public class A {
+	static int flag;
+	static int rong;
+	 static double money;
+	 static int cheng;
+}

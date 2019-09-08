@@ -1,0 +1,7 @@
+package computer;
+
+public class A {
+	static float rong;
+	 static float money;
+	 static float cheng;
+}
