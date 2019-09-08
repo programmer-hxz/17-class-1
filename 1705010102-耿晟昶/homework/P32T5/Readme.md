@@ -17,3 +17,5 @@ P32T5.cs  插件信息及内容关联
 P32T5.xaml 插件GUI
 
 P32T5Settings.cs 插件用户交互
+
+演示视频.mp4
