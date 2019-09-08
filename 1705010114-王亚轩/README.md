@@ -12,7 +12,9 @@
 
 ### 运行环境
 
->Windows
+>Windows10
+
+>python 3.7.4
 
 ### 功能描述
 
