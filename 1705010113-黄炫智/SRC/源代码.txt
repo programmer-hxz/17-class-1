@@ -21,63 +21,63 @@ public class Text1_5 {
 		get_result();
 	}
 	public void GUI() {
-		jFrame = new JFrame("Èí¼ş¹¤³ÌÏ°ÌâÒ»ÌâÄ¿5");
+		jFrame = new JFrame("è½¯ä»¶å·¥ç¨‹ä¹ é¢˜ä¸€é¢˜ç›®5");
 		jFrame.setSize(650,800);
 		jPanel = new JPanel();
 		jPanel.setBackground(new Color(255,255,153));
 		jPanel.setLayout(null);
 		jFrame.add(jPanel);
-		jLabel1_1 = new JLabel("ÊäÈëÄê·İ:");
+		jLabel1_1 = new JLabel("è¾“å…¥å¹´ä»½:");
 		jLabel1_1.setBounds(25, 25, 150, 25);
 		jLabel1_1.setFont(font);
-		jLabel1_2 = new JLabel("ÊäÈëÔÂĞ½:");
+		jLabel1_2 = new JLabel("è¾“å…¥æœˆè–ª:");
 		jLabel1_2.setBounds(250, 25, 150, 25);
 		jLabel1_2.setFont(font);
-		jLabel1_3 = new JLabel("ÊäÈë×Ö³¤:");
+		jLabel1_3 = new JLabel("è¾“å…¥å­—é•¿:");
 		jLabel1_3.setBounds(25, 60, 150, 25);
 		jLabel1_3.setFont(font);
-		jLabel1_4 = new JLabel("Ò»Ìì¿ª·¢Ö¸ÁîÊı:");
+		jLabel1_4 = new JLabel("ä¸€å¤©å¼€å‘æŒ‡ä»¤æ•°:");
 		jLabel1_4.setBounds(250, 60, 175, 25);
 		jLabel1_4.setFont(font);
 		
-		jLabel2 = new JLabel("<html>Àı(1)?ÔÚ1985(Êı¾İ¿ÉĞŞ¸Ä)Äê¶Ô¼ÆËã»ú´æ´¢ÈİÁ¿µÄĞèÇó¹À¼ÆÊÇ¶àÉÙ£¿"
-				+ "Èç¹û×Ö³¤Îª16Î»£¬Õâ¸ö´æ´¢Æ÷µÄ¼Û¸ñÊÇ¶àÉÙ£¿</html>");
+		jLabel2 = new JLabel("<html>ä¾‹(1)?åœ¨1985(æ•°æ®å¯ä¿®æ”¹)å¹´å¯¹è®¡ç®—æœºå­˜å‚¨å®¹é‡çš„éœ€æ±‚ä¼°è®¡æ˜¯å¤šå°‘ï¼Ÿ"
+				+ "å¦‚æœå­—é•¿ä¸º16ä½ï¼Œè¿™ä¸ªå­˜å‚¨å™¨çš„ä»·æ ¼æ˜¯å¤šå°‘ï¼Ÿ</html>");
 		jLabel2.setBounds(25, 115, 600, 50);
 		jLabel2.setFont(font);
-		jLabel2_1 = new JLabel("´æ´¢ÈİÁ¿ĞèÇóM=4080e0.28(Äê·İ-1960)=");
+		jLabel2_1 = new JLabel("å­˜å‚¨å®¹é‡éœ€æ±‚M=4080e0.28(å¹´ä»½-1960)=");
 		jLabel2_1.setBounds(25, 190, 400, 25);
 		jLabel2_1.setFont(font);
-		jLabel2_2 = new JLabel("´æ´¢Æ÷¼Û¸ñP=0.003*×Ö³¤*0.72(Äê·İ-1974)*M=");
+		jLabel2_2 = new JLabel("å­˜å‚¨å™¨ä»·æ ¼P=0.003*å­—é•¿*0.72(å¹´ä»½-1974)*M=");
 		jLabel2_2.setBounds(25, 225, 475, 25);
 		jLabel2_2.setFont(font);
 		
-		jLabel3 = new JLabel("<html>Àı(2)?¼ÙÉèÔÚ1985(Êı¾İ¿ÉĞŞ¸Ä)ÄêÒ»Ãû³ÌĞòÔ±Ã¿Ìì¿É¿ª·¢³ö10ÌõÖ¸Áî£¬³ÌĞòÔ±µÄÆ½¾ù¹¤×ÊÊÇÃ¿ÔÂ4000(Êı¾İ¿ÉĞŞ¸Ä)ÃÀÔª¡£"
-				+ "Èç¹ûÒ»ÌõÖ¸ÁîÎªÒ»¸ö×Ö³¤£¬¼ÆËãÊ¹´æ´¢Æ÷×°Âú³ÌĞòËùĞèÓÃµÄ³É±¾¡£</html>");
+		jLabel3 = new JLabel("<html>ä¾‹(2)?å‡è®¾åœ¨1985(æ•°æ®å¯ä¿®æ”¹)å¹´ä¸€åç¨‹åºå‘˜æ¯å¤©å¯å¼€å‘å‡º10æ¡æŒ‡ä»¤ï¼Œç¨‹åºå‘˜çš„å¹³å‡å·¥èµ„æ˜¯æ¯æœˆ4000(æ•°æ®å¯ä¿®æ”¹)ç¾å…ƒã€‚"
+				+ "å¦‚æœä¸€æ¡æŒ‡ä»¤ä¸ºä¸€ä¸ªå­—é•¿ï¼Œè®¡ç®—ä½¿å­˜å‚¨å™¨è£…æ»¡ç¨‹åºæ‰€éœ€ç”¨çš„æˆæœ¬ã€‚</html>");
 		jLabel3.setBounds(25, 290, 600, 75);
 		jLabel3.setFont(font);
-		jLabel3_1 = new JLabel("ĞèÒª¹¤×÷Á¿N=M/200=");
+		jLabel3_1 = new JLabel("éœ€è¦å·¥ä½œé‡N=M/200=");
 		jLabel3_1.setBounds(25, 390, 250, 25);
 		jLabel3_1.setFont(font);
 		jLabel3_1.setFont(font);
-		jLabel3_2 = new JLabel("Ö¸Áî³É±¾  S=N*ÔÂĞ½=");
+		jLabel3_2 = new JLabel("æŒ‡ä»¤æˆæœ¬  S=N*æœˆè–ª=");
 		jLabel3_2.setBounds(25, 425, 250, 25);
 		jLabel3_2.setFont(font);
 		
-		jLabel4 = new JLabel("<html>Àı(3)¼ÙÉèÔÚ1995(Êı¾İ¿ÉĞŞ¸Ä)Äê´æ´¢Æ÷×Ö³¤Îª32Î»£¬Ò»Ãû³ÌĞòÔ±Ã¿Ìì¿É¿ª·¢³ö30ÌõÖ¸Áî£¬"
-				+ "³ÌĞòÔ±µÄÔÂÆ½¾ù¹¤×ÊÎª6000(Êı¾İ¿ÉĞŞ¸Ä)ÃÀÔª£¬ÖØ¸´(1)¡¢(2)Ìâ¡£</html>");
+		jLabel4 = new JLabel("<html>ä¾‹(3)å‡è®¾åœ¨1995(æ•°æ®å¯ä¿®æ”¹)å¹´å­˜å‚¨å™¨å­—é•¿ä¸º32ä½ï¼Œä¸€åç¨‹åºå‘˜æ¯å¤©å¯å¼€å‘å‡º30æ¡æŒ‡ä»¤ï¼Œ"
+				+ "ç¨‹åºå‘˜çš„æœˆå¹³å‡å·¥èµ„ä¸º6000(æ•°æ®å¯ä¿®æ”¹)ç¾å…ƒï¼Œé‡å¤(1)ã€(2)é¢˜ã€‚</html>");
 		jLabel4.setBounds(25, 490, 600, 75);
 		jLabel4.setFont(font);
-		jLabel4_1 = new JLabel("´æ´¢ÈİÁ¿ĞèÇóM=4080e0.28(Äê·İ-1960)=");
+		jLabel4_1 = new JLabel("å­˜å‚¨å®¹é‡éœ€æ±‚M=4080e0.28(å¹´ä»½-1960)=");
 		jLabel4_1.setBounds(25, 590, 400, 25);
 		jLabel4_1.setFont(font);
-		jLabel4_2 = new JLabel("´æ´¢Æ÷¼Û¸ñP=0.003*×Ö³¤*0.72(Äê·İ-1974)*M=");
+		jLabel4_2 = new JLabel("å­˜å‚¨å™¨ä»·æ ¼P=0.003*å­—é•¿*0.72(å¹´ä»½-1974)*M=");
 		jLabel4_2.setBounds(25, 625, 475, 25);
 		jLabel4_2.setFont(font);
-		jLabel4_3 = new JLabel("ĞèÒª¹¤×÷Á¿N=M/200=");
+		jLabel4_3 = new JLabel("éœ€è¦å·¥ä½œé‡N=M/200=");
 		jLabel4_3.setBounds(25, 660, 250, 25);
 		jLabel4_3.setFont(font);
 		jLabel4_3.setFont(font);
-		jLabel4_4 = new JLabel("Ö¸Áî³É±¾  S=N*ÔÂĞ½=");
+		jLabel4_4 = new JLabel("æŒ‡ä»¤æˆæœ¬  S=N*æœˆè–ª=");
 		jLabel4_4.setBounds(25, 695, 250, 25);
 		jLabel4_4.setFont(font);
 		
@@ -117,7 +117,7 @@ public class Text1_5 {
 		jTextField4_4.setBounds(230, 695, 100, 25);
 		jTextField4_4.setEditable(false);
 		
-		jButton = new JButton("ÊäÈë");
+		jButton = new JButton("è¾“å…¥");
 		jButton.setBounds(475, 25, 100, 25);
 		jButton.setFont(font);
 		jPanel.add(jLabel1_1);
@@ -165,7 +165,7 @@ public class Text1_5 {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO ÊäÈëÄê·İ
+				// TODO è¾“å…¥å¹´ä»½
 				int n = Integer.parseInt(jTextField1_1.getText());
 				int money = Integer.parseInt(jTextField1_2.getText());
 				int m =(int) (4080*Math.pow(Math.E,0.28*(n-1960)));
