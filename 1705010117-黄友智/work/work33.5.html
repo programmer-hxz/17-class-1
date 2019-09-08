@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>第一周作业</title>
+    <meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <link href="css/a.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="one">
+        1.查询计算机存储容量：
+	<form method="post" action="xuqiu.php">
+            <ul style="list-style-type:none">
+                请输入年份：<br/>
+                <li><input type="text" name= "year"  /></li>
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button type="submit">查询</button>
+	</form>
+    </div>
+<br/><br/>
+    <div class="two">
+    2.查询存储器的价格：   
+    <form  method="post" action="jiage.php">
+            <ul style="list-style-type:none">
+                请输入年份：<br/>
+                <li><input type="text" name= "year"   /></li>
+                请输入字长：<br/>
+                <li><input type="text" name="length" /></li>
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button  type="submit">查询</button>
+    </form>
+    </div>
+<br/><br/>
+    <div class="three">
+        3.查询装满存储器所需要的成本：
+   <form  method="post" action="chengben.php">
+            <ul style="list-style-type:none">
+                请输入年份：<br/>
+                <li><input type="text" name= "year"  /></li>
+                请输入指令数：<br/>
+                <li><input type="text" name="number" /></li>
+                请输入平均工资：<br/>
+                <li><input type="text" name="wages" /></li>
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button  type="submit">查询</button>
+    </form>
+    </div>
+</body>
+</html>
