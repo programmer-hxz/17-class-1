@@ -24,8 +24,8 @@
 
 ### 运行文件位置
  
->src/计算机容量问题计算.exe
+>计算机容量问题.exe
 
 ### 源码文件
 
-[practice.py](https://github.com/forrestrun7/17-class-1/blob/master/1705010114-%E7%8E%8B%E4%BA%9A%E8%BD%A9/practice.py)
+[practice.py](https://github.com/forrestrun7/17-class-1/blob/master/1705010114-%E7%8E%8B%E4%BA%9A%E8%BD%A9/src/practice.py)
