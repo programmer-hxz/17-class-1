@@ -1,0 +1,185 @@
+package computer;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JTextArea;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class main extends JFrame {
+	 
+	public int year;
+	public double work;
+	public double mon;
+	public double len;
+	private JPanel contentPane;
+	private JTextField Y;
+	private JTextField W;
+	private JTextField M;
+	private JTextField L;
+	 
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					main frame = new main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public main() {
+		setTitle("\u8BA1\u7B97");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 701, 443);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		Y = new JTextField();
+		Y.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("\u5E74\u4EFDY:");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("楷体", Font.PLAIN, 21));
+		
+		JLabel lblNewLabel_1 = new JLabel("\u7A0B\u5E8F\u5458\u6BCF\u65E5\u5DE5\u4F5C\u91CFW\uFF1A");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("楷体", Font.PLAIN, 21));
+		
+		JLabel lblNewLabel_2 = new JLabel("\u7A0B\u5E8F\u5458\u6BCF\u6708\u5DE5\u8D44M:");
+		lblNewLabel_2.setFont(new Font("楷体", Font.PLAIN, 21));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JLabel lblNewLabel_3 = new JLabel("\u8BA1\u7B97\u673A\u5B57\u957FL:");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3.setFont(new Font("楷体", Font.PLAIN, 21));
+		
+		W = new JTextField();
+		W.setColumns(10);
+		
+		M = new JTextField();
+		M.setColumns(10);
+		
+		L = new JTextField();
+		L.setColumns(10);
+		
+		JButton btnNewButton = new JButton("\u8BA1\u7B97\u5B58\u50A8\u5BB9\u91CF");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				year=Integer.parseInt(Y.getText());
+				A.rong=4080*Math.exp(0.28*(year-1960));
+				A.flag=1;
+				new zhi().Zhi();
+			}
+		});
+		
+		JButton btnNewButton_1 = new JButton("\u8BA1\u7B97\u8BA1\u7B97\u673A\u4EF7\u683C");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				year=Integer.parseInt(Y.getText());
+				A.rong=4080*Math.exp(0.28*(year-1960));
+				A.money=0.048*Math.pow(0.72, year-1974)*A.rong;
+				System.out.print(A.money);
+				A.flag=2;
+				new zhi().Zhi();
+			}
+		});
+		
+		JButton btnNewButton_2 = new JButton("\u8BA1\u7B97\u6210\u672C");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				year=Integer.parseInt(Y.getText());
+				work=Doubleger.parseInt(W.getText());
+				mon=Integer.parseInt(M.getText());
+				A.rong=4080*Math.exp(0.28*(year-1960));
+				System.out.print(A.rong/(work*1.0));
+				A.cheng=(A.rong/(work*1.0))*mon;
+				A.flag=3;
+				new zhi().Zhi();
+			}
+		});
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addContainerGap(101, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE)
+							.addGap(57))
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addComponent(lblNewLabel_2)
+							.addGap(88))
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addComponent(lblNewLabel_1)
+							.addGap(80))
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addComponent(lblNewLabel_3)
+							.addGap(96)))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(M, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+						.addComponent(W, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+						.addComponent(L, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Y, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))
+					.addGap(182))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(89)
+					.addComponent(btnNewButton)
+					.addGap(56)
+					.addComponent(btnNewButton_1)
+					.addGap(71)
+					.addComponent(btnNewButton_2)
+					.addContainerGap(84, Short.MAX_VALUE))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(51)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(Y, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE))
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(W, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel_1))
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(M, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel_2))
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(L, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel_3))
+					.addGap(41)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnNewButton)
+						.addComponent(btnNewButton_1)
+						.addComponent(btnNewButton_2))
+					.addGap(75))
+		);
+		contentPane.setLayout(gl_contentPane);
+	}
+}
