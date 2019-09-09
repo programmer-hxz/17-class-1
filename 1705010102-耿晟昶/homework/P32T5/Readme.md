@@ -19,3 +19,5 @@ P32T5.xaml 插件GUI
 P32T5Settings.cs 插件用户交互
 
 演示视频.mp4
+
+P32T5.rar  cs文件、xaml文件以及Settings.cs的打包
