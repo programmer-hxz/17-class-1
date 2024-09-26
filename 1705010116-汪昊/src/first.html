@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题1第五题</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="inform">
+<label>字     长：</label>
+<input type="text" id="long">
+</br>
+<label>年     份：</label>
+<input type="text" id="year">
+</br>
+<label>工     资：</label>
+<input type="text" id="money">
+</br> 
+<label>指 令 数 量：</label>
+<input type="text" id="number">
+</br>
+<button>进行计算(结果显示如下）</button>
+</br> 
+<label>计算机存储容量需求估计（字）:</label>
+<input type="text" id="result1">
+</br>
+<label>存储器价格（美元/字）:</label>
+<input type="text" id="result2">
+</br>
+<label>装满程序所需用的成本（美元）:</label>
+<input type="text" id="result3">
+<script  src="js/index.js"></script>
+<script  src="jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("button").click(function(){
+            var long=$("#long").val();
+            var year=$("#year").val();
+            var money=$("#money").val();
+            var number=$("#number").val();
+            $("#result1").attr("value",4080 * Math.exp(0.28*(year - 1960)));
+			$("#result2").attr("value",0.048 * Math.pow(0.72,(year - 1974)*1.0) * long);
+			$("#result3").attr("value",(4080 * Math.exp(0.28*(year - 1960)))* money / (number*long)*30);
+        });
+    });
+</script>
+</body>
+</html>

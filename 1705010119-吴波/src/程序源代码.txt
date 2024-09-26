@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace 软件工程作业
+{
+    public partial class Form1 : Form
+    {
+        double a = 0;
+        double b = 0;
+        double c = 0;
+        double d = 0;
+        double x = 0;
+        double h = 0;
+        double j = 0;
+        double m = 0;
+        double n = 0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        //计算计算机的存储容量
+        private void button1_Click(object sender, EventArgs e)
+        {
+            b= 0.28 * (a - 1960);
+            c = 4080 * Math.Exp(b);
+            textBox5.Text = c + "";
+        }
+        //获取年份
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox1.Text!="")
+            a = double.Parse(textBox1.Text);
+        }
+        //获取计算机字长
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "")
+                d = double.Parse(textBox2.Text);
+        }
+        //先判断字长，然后计算存储器价格
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (d == 16)
+            {
+                x = 0.048 * Math.Pow(0.72, a - 1974)* 4080 * Math.Exp(0.28 * (a - 1960));
+                textBox6.Text = x + "";
+            }
+            else
+            {
+                x = 0.003 * d * Math.Pow(0.72, a - 1974) * 4080 * Math.Exp(0.28 * (a - 1960));
+                textBox6.Text = x + "";
+            }
+        }
+        //获取每天可开发的指令数量
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox3.Text != "")
+                h = double.Parse(textBox3.Text);
+        }
+        //获取程序员平均月工资
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox4.Text != "")
+                j = double.Parse(textBox4.Text);
+        }
+        //计算装满程序所需成本
+        private void button3_Click(object sender, EventArgs e)
+        {
+            m = 4080 * Math.Exp(0.28 * (a - 1960)) / (h * 20);
+            n = m * j;
+            textBox7.Text = n + "";
+        }
+        //清空数据重新输入
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+        }
+    }
+}
